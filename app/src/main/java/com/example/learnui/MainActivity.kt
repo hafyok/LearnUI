@@ -23,14 +23,7 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            LearnUITheme {
-                // A surface container using the 'background' color from the theme
-                Surface(
-                    modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colorScheme.background
-                ) {
-                }
-            }
+            HomeScreen()
         }
     }
 }
@@ -42,14 +35,14 @@ class MainActivity : ComponentActivity() {
 fun HomeScreen(){
     Scaffold(
         bottomBar = {
-
+            BottomNavigationBar()
         }
     ){
         padding ->
         Column(
             modifier = Modifier
-            .fillMaxSize()
-            .padding(padding)
+                .fillMaxSize()
+                .padding(padding)
         ){
             //WalletSection()
             //CardSection()
