@@ -1,4 +1,4 @@
-package com.example.learnui
+package com.example.learnui.Presentation
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -23,6 +23,8 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.example.learnui.R
+import com.example.learnui.data.Card
 import com.example.learnui.ui.theme.BlueEnd
 import com.example.learnui.ui.theme.BlueStart
 import com.example.learnui.ui.theme.GreenEnd
@@ -79,7 +81,7 @@ fun getGradient(
 @Composable
 fun CardsSection(){
     LazyRow(){
-        items(cards.size){index ->
+        items(cards.size){ index ->
             CardItem(index)
 
         }

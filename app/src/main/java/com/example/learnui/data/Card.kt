@@ -1,4 +1,4 @@
-package com.example.learnui
+package com.example.learnui.data
 
 import androidx.compose.ui.graphics.Brush
 

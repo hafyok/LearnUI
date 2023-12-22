@@ -14,6 +14,9 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.example.learnui.Presentation.CardsSection
+import com.example.learnui.Presentation.FinanceSection
+import com.example.learnui.Presentation.WalletSection
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -43,7 +46,7 @@ fun HomeScreen(){
             WalletSection()
             CardsSection()
             Spacer(modifier = Modifier.height(16.dp))
-            //FinanceSection()
+            FinanceSection()
             //CurrentSection()
         }
     }
