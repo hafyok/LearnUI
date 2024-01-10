@@ -15,6 +15,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.learnui.Presentation.CardsSection
+import com.example.learnui.Presentation.CurrenciesSection
 import com.example.learnui.Presentation.FinanceSection
 import com.example.learnui.Presentation.WalletSection
 
@@ -47,7 +48,7 @@ fun HomeScreen(){
             CardsSection()
             Spacer(modifier = Modifier.height(16.dp))
             FinanceSection()
-            //CurrentSection()
+            CurrenciesSection()
         }
     }
 }
