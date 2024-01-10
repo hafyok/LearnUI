@@ -186,7 +186,7 @@ fun CurrenciesSection() {
                 Column(
                     modifier = Modifier
                         .fillMaxWidth()
-                        .padding(16.dp)
+                        .padding(horizontal = 16.dp)
                 ) {
 
                     Spacer(modifier = Modifier.height(16.dp))
@@ -254,28 +254,35 @@ fun CurrencyItem(index: Int, width: Dp){
             .padding(bottom = 16.dp),
         verticalAlignment = Alignment.CenterVertically
     ){
-        Box(modifier = Modifier
-            .clip(RoundedCornerShape(8.dp))
-            .background(GreenStart)
-            .padding(4.dp)
-        ){
-            Icon(
-                modifier = Modifier.size(18.dp),
-                imageVector = currency.icon,
-                contentDescription = currency.name,
-                tint = Color.White
+        Row (
+            modifier = Modifier.width(width),
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+
+
+            Box(
+                modifier = Modifier
+                    .clip(RoundedCornerShape(8.dp))
+                    .background(GreenStart)
+                    .padding(4.dp)
+            ) {
+                Icon(
+                    modifier = Modifier.size(18.dp),
+                    imageVector = currency.icon,
+                    contentDescription = currency.name,
+                    tint = Color.White
+                )
+            }
+
+            Text(
+                modifier = Modifier
+                    .padding(start = 10.dp),
+                text = currency.name,
+                fontWeight = FontWeight.Bold,
+                fontSize = 18.sp,
+                color = MaterialTheme.colorScheme.onBackground,
             )
         }
-
-        Text(
-            modifier = Modifier
-                .width(width)
-                .padding(start = 10.dp),
-            text = currency.name,
-            fontWeight = FontWeight.Bold,
-            fontSize = 18.sp,
-            color = MaterialTheme.colorScheme.onBackground,
-        )
 
         Text(
             modifier = Modifier
@@ -301,3 +308,4 @@ fun CurrencyItem(index: Int, width: Dp){
 
     }
 }
+
